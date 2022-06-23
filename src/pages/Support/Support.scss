@@ -1,0 +1,382 @@
+@use "../../variables.scss";
+
+
+.content-donation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 82px;
+}
+
+@media screen and (min-width: 869px) {
+  .content-donation {
+    padding-top: 0;
+  }
+}
+
+
+.transfer-donation {
+  align-self:center;
+  display: grid;
+  grid-template-columns: minmax(366px, 629px);
+  box-sizing: border-box;
+  padding: 0 23px 24px;
+  max-width: 1440px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .transfer-donation {
+    align-self:flex-end;
+    display: grid;
+    grid-template-columns: minmax(366px, 629px) minmax(366px, 600px);
+    column-gap: 61px;
+    padding: 21px 30px 81px;
+  }
+}
+
+
+@media screen and (min-width: 1441px) {
+  .transfer-donation {
+    align-self: center;
+    padding-left: 120px;
+  }
+}
+
+
+.transfer-donation__title {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  color: variables.$black;
+  margin: 0;
+  padding-top: 14px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .transfer-donation__title {
+    font-size: 56px;
+    line-height: 56px;
+    padding-top: 28px;
+  }
+}
+
+
+.transfer-donation__paragraph {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: variables.$black;
+  margin: 0;
+  padding: 24px 0 0 62px;
+}
+
+
+.transfer-donation__paragraph:first-of-type {
+  padding-top: 27px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .transfer-donation__paragraph {
+    font-size: 28px;
+    line-height: 32px;
+    padding-top: 32px;
+    max-width: 537px;
+  }
+
+  .transfer-donation__paragraph:first-of-type {
+    padding-top: 57px;
+  }
+}
+
+
+.transfer-donation__note {
+  position: relative;
+  font-family: 'Formular Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  font-feature-settings: 'ss01' on;
+  color: variables.$black;
+  margin-top: 61px;
+  margin-bottom: 0;
+  padding: 0 0 58px 28px;
+  max-width: 345px;
+}
+
+
+.transfer-donation__note::before {
+  position: absolute;
+  top: -27px;
+  left: 1px;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-image: url(../../assets/support/asterisk.svg);
+}
+
+
+@media screen and (min-width: 869px) {
+  .transfer-donation__note {
+    margin-top: 122px;
+    margin-left: 32px;
+  }
+}
+
+
+.transfer-donation__form {
+  height: 524px;
+  background: #FFFFFF;
+}
+
+
+@media screen and (min-width: 869px) {
+  .transfer-donation__form {
+    height: 630px;
+  }
+}
+
+
+.about-donations {
+  width: 100%;
+  padding-top: 34px;
+  padding-bottom: 73px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .about-donations {
+    padding-top: 34px;
+    padding-bottom: 146px;
+  }
+}
+
+
+.about-donations__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (min-width: 1280px) {
+  .about-donations__title-wrapper {
+    flex-direction: row;
+    align-items: flex-end
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .about-donations__title-wrapper_in-reverse {
+    justify-content: space-between;
+  }
+}
+
+
+.about-donations__picture {
+  display: block;
+  object-fit: cover;
+  height: 200px;
+  min-width: 390px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .about-donations__picture {
+    width: 54.17%;
+    max-width: 781px;
+    height: auto;
+    min-height: 200px;
+    max-height: 300px;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .about-donations__picture {
+    padding: 0;
+  }
+}
+
+
+.about-donations__picture_position_right {
+  padding-left: 24px;
+  align-self: flex-end;
+  order: 0;
+}
+
+
+@media screen and (min-width: 1280px) {
+  .about-donations__picture_position_right {
+    order: 1;
+  }
+}
+
+
+.about-donations__picture_position_left {
+  padding-right: 24px;
+  align-self: flex-start;
+}
+
+
+.about-donations__title {
+  max-width: 485px;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: variables.$black;
+  margin: 0;
+  padding: 42px 31px 0 24px;
+}
+
+
+.about-donations__title_position_left {
+  align-self: flex-start;
+}
+
+
+.about-donations__title_position_right {
+  align-self: flex-end;
+}
+
+
+@media screen and (min-width: 768px) {
+  .about-donations__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .about-donations__title_position_left {
+    padding: 0 59px 5px 32px;
+    align-self: flex-end;
+  }
+
+
+  .about-donations__title_position_right {
+    padding: 0 32px 5px 36px;
+    align-self: flex-end;
+  }
+}
+
+
+.about-donations__card-wrapper {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+  column-gap: 47px;
+  row-gap: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 28px 24px 0 85px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .about-donations__card-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
+    row-gap: 72px;
+    padding: 71px 32px 0 32px;
+  }
+}
+
+
+@media screen and (min-width: 1153px) {
+  .about-donations__card-wrapper {
+    row-gap: 119px;
+  }
+}
+
+
+.about-donations__card {
+  font-family: 'Formular Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  font-feature-settings: 'ss01' on;
+  color: variables.$black;
+}
+
+
+@media screen and (min-width: 869px) {
+  .about-donations__card {
+    font-family: 'Neue Machina';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-feature-settings: normal;
+    letter-spacing: -0.01em;
+  }
+}
+
+
+.accounting {
+  width: 100%;
+  padding-bottom: 110px;
+  max-width: 1440px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .accounting {
+    padding-bottom: 202px;
+  }
+}
+
+
+.accounting__title {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: variables.$black;
+  margin: 0;
+  padding: 73px 24px 0 26px;
+}
+
+
+@media screen and (min-width: 869px) {
+  .accounting__title {
+    max-width: 873px;
+    font-size: 36px;
+    line-height: 38px;
+    padding-top: 71px;
+    padding-left: calc(268px - (1440px - 100vw)/2.45);
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .accounting__title {
+    padding-left: 268px;
+  }
+}
+
+
+.accounting__mail-link {
+  color: inherit;
+}
+
+
+.accounting__mail-link:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
