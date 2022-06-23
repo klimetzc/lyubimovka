@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SmallButton from "../../components/UI/SmallButton/SmallButton";
 import "./History.scss";
 
@@ -17,6 +18,7 @@ const History = () => {
   }, []);
   return (
     <div className="History">
+      <Link to="/" className="History__logo"></Link>
       <div className="History__dragSelect">
         <div className="History__dragSelect-year">2022</div>
         <div className="History__dragSelect-year">2021</div>
@@ -45,7 +47,7 @@ const History = () => {
             </div>
             <div className="History__info-data_fact">
               <p className="History__info-data_fact-title">{data.playsConfirmed}</p>
-              <p className="History__info-data_fact-text">пьсе прошли отбор</p>
+              <p className="History__info-data_fact-text">пьес прошли отбор</p>
             </div>
             <div className="History__info-data_fact">
               <p className="History__info-data_fact-title">{data.playsReviewers}</p>
@@ -69,15 +71,27 @@ const History = () => {
           <div className="History__info-links">
             <div className="History__info-links-column">
               <p className="History__info-link-title">Пьесы</p>
-              <SmallButton arrPos="Pright">Шорт-лист</SmallButton>
-              <SmallButton arrPos="Pright">Fringe-программа</SmallButton>
-              <SmallButton arrPos="Pright">Особо отмеченные</SmallButton>
-              <SmallButton arrPos="Pright">Внеконкрусная программа</SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Шорт-лист
+              </SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Fringe-программа
+              </SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Особо отмеченные
+              </SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Внеконкрусная программа
+              </SmallButton>
             </div>
             <div className="History__info-links-column">
               <p className="History__info-link-title">Дополнительно</p>
-              <SmallButton arrPos="Pright">Записи в блоге</SmallButton>
-              <SmallButton arrPos="Pright">Видео с фестиваля</SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Записи в блоге
+              </SmallButton>
+              <SmallButton arrPos="Pright" classCSS="History__info-link">
+                Видео с фестиваля
+              </SmallButton>
             </div>
           </div>
         </div>

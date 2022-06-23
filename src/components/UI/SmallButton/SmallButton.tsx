@@ -17,6 +17,7 @@ interface ISmallButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   arrPos: arrowPosition; // С какой стороны фон
   arrDirection?: arrowDirection; // Поворот фонового изображения
   backImage?: "backPlus" | "backArrow" | "backPlus"; // Фоновое изображение
+  classCSS?: string;
 }
 
 const SmallButton: React.FC<ISmallButton> = ({
@@ -25,11 +26,12 @@ const SmallButton: React.FC<ISmallButton> = ({
   borders,
   arrPos,
   backImage,
+  classCSS,
   ...props
 }) => {
   return (
     <button
-      className={`SmallButton ${props.className || ""} ${borders || ""} ${arrDirection || ""} ${
+      className={`SmallButton ${classCSS || ""} ${borders || ""} ${arrDirection || ""} ${
         arrPos || ""
       } ${backImage || ""} ${fullWidth ? "SmallButton__fullWidth" : ""}`}
       {...props}
