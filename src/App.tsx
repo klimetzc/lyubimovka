@@ -12,7 +12,7 @@ import Main from "./pages/Main/Main";
 import News from "./pages/News/News";
 import Playbill from "./pages/Playbill/Playbill";
 import Projects from "./pages/Projects/Projects";
-import Support from "./pages/Support";
+import Support from "./pages/Support/Support";
 // import { CSSTransition } from "react-transition-group";
 import "./assets/fonts/fonts.css";
 import Footer from "./components/Footer/Footer";
