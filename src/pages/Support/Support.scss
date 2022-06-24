@@ -14,7 +14,7 @@
 
 
 .transfer-donation {
-  align-self:center;
+  align-self: center;
   display: grid;
   grid-template-columns: minmax(366px, 629px);
   box-sizing: border-box;
@@ -22,7 +22,7 @@
   max-width: 1440px;
 
   @media screen and (min-width: 869px) {
-    align-self:flex-end;
+    align-self: flex-end;
     display: grid;
     grid-template-columns: minmax(366px, 629px) minmax(366px, 600px);
     column-gap: 61px;
@@ -86,7 +86,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 23px;
-    font-feature-settings: 'ss01' on;
+    font-feature-settings: 'ss01'on;
     color: variables.$black;
     margin-top: 61px;
     margin-bottom: 0;
@@ -100,7 +100,7 @@
       content: "";
       width: 25px;
       height: 25px;
-      background-image: url(../../assets/support/asterisk.svg);
+      background-image: url(../../assets/icons/asterisk.svg);
     }
 
     @media screen and (min-width: 869px) {
@@ -156,11 +156,11 @@
     min-width: 390px;
 
     @media screen and (min-width: 768px) {
-        width: 54.17%;
-        max-width: 781px;
-        height: auto;
-        min-height: 200px;
-        max-height: 300px;
+      width: 54.17%;
+      max-width: 781px;
+      height: auto;
+      min-height: 200px;
+      max-height: 300px;
     }
 
     @media screen and (min-width: 1280px) {
@@ -221,7 +221,7 @@
 
 
   &__card-wrapper {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(237px, 1fr));
     column-gap: 47px;
     row-gap: 24px;
@@ -246,7 +246,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 23px;
-    font-feature-settings: 'ss01' on;
+    font-feature-settings: 'ss01'on;
     color: variables.$black;
 
     @media screen and (min-width: 869px) {
