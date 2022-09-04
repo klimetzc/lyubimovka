@@ -1,0 +1,103 @@
+@use "../../variables.scss";
+
+.NavBar {
+  width: 100%;
+  max-width: 100vw;
+  padding: 9px 0 0;
+  position: sticky;
+  top: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: variables.$main-background;
+  justify-content: space-around;
+  border-bottom: 1px solid variables.$black;
+  overflow: hidden;
+  z-index: 100;
+
+  &__socials {
+    border-left: 1px solid variables.$black;
+    border-right: 1px solid variables.$black;
+    padding: 0 5px 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Formular Light";
+  }
+
+  &__social-link {
+    padding: 0 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__link {
+    font-family: "Formular Light", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    font-size: 16px;
+    // min-width: 100px;
+    padding: 10px 2px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: variables.$black;
+
+    .border {
+      display: inline-block;
+      width: 10px;
+      height: 24px;
+      visibility: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: .4s;
+      opacity: 0;
+
+      &.borderLeft {
+        background-image: url("../../assets/icons/leftBorder.svg");
+        transform: translateX(-5px);
+      }
+
+      &.borderRight {
+
+        background-image: url("../../assets/icons/rightBorder.svg");
+        transform: translateX(5px);
+      }
+    }
+
+
+    &.active:not(.logoLink) {
+      // color: rgb(255, 93, 93);
+
+      .border {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .borderLeft {
+        transform: translateX(0px);
+      }
+
+      .borderRight {
+        transform: translateX(0px);
+      }
+    }
+
+    &.logoLink {
+      background-image: url("../../assets/icons/love.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 43px 35px;
+      box-sizing: border-box;
+      min-width: 43px;
+      height: 35px;
+      margin-top: 5px;
+      padding: 0;
+      margin-left: 5px;
+    }
+  }
+}

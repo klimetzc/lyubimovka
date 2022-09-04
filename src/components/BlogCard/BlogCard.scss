@@ -1,0 +1,128 @@
+@use "../../variables.scss";
+
+.card {
+  color: variables.$black;
+  margin: 24px 30px;
+  cursor: pointer;
+
+  &-wide {
+    max-width: 603px;
+    grid-column-end: span 66;
+    grid-row-end: span 45;
+    text-align: start;
+
+    &:hover &__img {
+      transform: scale(1.2);
+    }
+
+    &__img-comtainer {
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    &__img {
+      transition: transform 0.4s cubic-bezier(0.6, 0, 0.5, 1);
+      margin-bottom: -4px;
+      max-width: 100%;
+    }
+
+    &__author {
+      font-family: "Formular Light";
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 300;
+      margin: 0 0 6px 0;
+
+      @media screen and (max-width: 640px) {
+        margin: 0 0 6px 30px;
+      }
+    }
+
+    &__title {
+      font-family: "Neue Machina";
+      font-size: 36px;
+      line-height: 38px;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+      margin: 0 0 20px 0;
+
+      @media screen and (max-width: 640px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+
+    &__description {
+      font-family: "Formular Light";
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 300;
+      margin: 0 0 0 30px;
+      width: 300px;
+    }
+  }
+
+  &-narrow {
+    max-width: 270px;
+    grid-column-end: span 33;
+
+    &:hover &__img {
+      transform: scale(1.2);
+    }
+
+    &__img-comtainer {
+      overflow: hidden;
+      margin-bottom: 11px;
+    }
+
+    &__img {
+      transition: transform 0.4s cubic-bezier(0.6, 0, 0.5, 1);
+      margin-bottom: -4px;
+      max-width: 100%;
+    }
+
+    &__author {
+      font-family: "Formular Light";
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 300;
+      margin: 0 0 13px 0;
+      text-align: start;
+
+      @media screen and (max-width: 640px) {
+        margin: 0 0 13px 30px;
+      }
+    }
+
+    &__title {
+      font-family: "Neue Machina";
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+      margin: 0 0 19px 0;
+      text-align: start;
+    }
+
+    &__description {
+      font-family: "Formular Light";
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 300;
+      margin: 0;
+      text-align: center;
+    }
+
+    &-short {
+      grid-row-end: span 43;
+    }
+
+    &-medium {
+      grid-row-end: span 55;
+    }
+
+    &-long {
+      grid-row-end: span 62;
+    }
+  }
+}

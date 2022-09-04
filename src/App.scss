@@ -1,0 +1,27 @@
+@use 'variables.scss';
+
+.App {
+  font-family: "Neue Machina";
+  min-height: 100vh;
+  //text-align: center;
+  background-color: variables.$main-background;
+  color: variables.$black;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  // overflow-x: hidden;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 2px !important;
+  background-color: variables.$main-background !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$black !important;
+}

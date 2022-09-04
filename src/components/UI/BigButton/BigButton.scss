@@ -1,0 +1,134 @@
+@use "../../../variables.scss";
+
+.BigButton {
+  $transition: .4s;
+  // min-width: 240px;
+  height: 56px;
+  position: relative;
+  font-family: "Formular Light";
+  font-size: 16px;
+  line-height: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 0 50px 0 16px;
+  cursor: pointer;
+  border: none;
+
+  transition: $transition;
+  transition-delay: .2s;
+  transition-timing-function: cubic-bezier(.08, .12, .98, .46);
+
+  &__fullWidth {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &.top {
+    border-top: 1px solid variables.$black;
+  }
+
+  &.bottom {
+    border-bottom: 1px solid variables.$black;
+  }
+
+  &.left {
+    border-left: 1px solid variables.$black;
+  }
+
+  &.right {
+    border-right: 1px solid variables.$black;
+  }
+
+  &.whiteBack {
+    background: linear-gradient(90deg, variables.$main-background 50%, variables.$black 50%);
+    background-size: 250%;
+    background-position: 0% 0%;
+  }
+
+  &.greenBack {
+    background: linear-gradient(90deg, variables.$accent 50%, variables.$black 50%);
+    background-size: 250%;
+    background-position: 0% 0%;
+  }
+
+  &::before {
+    content: " ";
+    background-image: url("../../../assets/icons/arrow-black.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 10;
+    min-height: 20px;
+    width: 20px;
+    height: 56px;
+    transition: $transition;
+    transition-delay: .4s
+  }
+
+  & {
+    &.Dtop::before {
+      transform: rotate(-90deg);
+    }
+
+    &.Dright::before {
+      transform: rotate(0deg);
+    }
+
+    &.Dbottom::before {
+      transform: rotate(90deg);
+    }
+
+    &.Dleft::before {
+      transform: rotate(180deg);
+    }
+
+    &.DtopLeft::before {
+      transform: rotate(-135deg);
+    }
+
+    &.DtopRight::before {
+      transform: rotate(-45deg);
+    }
+
+    &.DbottomLeft::before {
+      transform: rotate(135deg);
+    }
+
+    &.DbottomRight::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  & {
+    &.backPlus::before {
+      background-image: url("../../../assets/icons/plus.svg");
+    }
+  }
+
+  & {
+    &.backOk::before {
+      background-image: url("../../../assets/icons/ok.svg");
+    }
+  }
+
+
+  &:hover {
+    background-position: -75% 0%;
+    color: variables.$main-background;
+
+    &::before {
+      background-image: url("../../../assets/icons/arrow-white.svg");
+    }
+
+    &.backPlus::before {
+      background-image: url("../../../assets/icons/plusWhite.svg");
+    }
+
+    &.backOk::before {
+      background-image: url("../../../assets/icons/ok-white.svg");
+    }
+  }
+}

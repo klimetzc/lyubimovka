@@ -1,0 +1,113 @@
+.footer {
+  @media screen and (min-width: 1100px) {
+    .content {
+      display: grid;
+      grid-template-areas:
+        ". logo logo  logo  logo      logo ."
+        ". .    links links add-links sponsors .";
+      grid-template-columns: 1px 90px 1fr 1fr 1fr 1fr 1px;
+      row-gap: 20px;
+      column-gap: 20px;
+      padding: 0;
+    }
+
+    &__address {
+      padding: 0;
+      grid-area: addr;
+      display: none
+    }
+
+    &__links {
+      padding: 0;
+      grid-area: links;
+      align-self: start;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__additional-links {
+      padding: 0;
+      grid-area: add-links;
+      gap: 15px
+    }
+
+    &__sponsors {
+      gap: 5px;
+      grid-area: sponsors;
+      grid-template-areas: "title title title title"
+        "fig fig fig fig";
+      padding: 0;
+
+      &-title {
+        display: block;
+        margin: 0;
+        grid-area: title;
+        text-align: left;
+        max-width: 50px;
+        font-family: "Formular Light";
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      &-figures {
+        padding-top: 28px;
+        grid-area: fig;
+        display: flex;
+      }
+
+      & figcaption {
+        display: none;
+      }
+
+      & img {
+        width: 90px;
+      }
+    }
+
+    &__pb {
+      border: none;
+      display: flex;
+      grid-template-columns: repeat(4, 1fr);
+      padding-left: 133px;
+      align-self: flex-start;
+      padding-top: 50px;
+      font-size: 14px;
+      line-height: 17px;
+      width: 100%;
+      box-sizing: border-box;
+
+
+      &-copyright {
+        max-width: 200px;
+        padding-right: 32px;
+      }
+
+      &-privacy {
+        // grid-area: first;
+        max-width: 300px;
+        padding-top: 0;
+      }
+
+      &-designers {
+        // grid-area: seconds;
+        max-width: 150px;
+        margin: 0;
+        margin-left: auto;
+        padding-left: 30px;
+
+      }
+
+      &-developers {
+        // grid-area: second;
+        max-width: 210px;
+        margin: 0;
+        padding-left: 0px;
+        padding-top: 0px;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 ## Стек, на котором будем разрабатывать:
 
-Основа: _`React, TypeScript, Redux(Redux Toolkit), styled-components`_
+Основа: _`React, TypeScript, Redux(Redux Toolkit), (styled-components либо же Sass(Scss))`_ Если исполбзуете Sass, берем переменные стилей из файла `variables.scc`
 Плюс, возможно, более мелкие библиотеки вроде _`React Transiton Group`_ для анимаций, _`React Router`_ для роутинга между страницами и т.д.
 Если доживем до бекенда, то _`express` или `Nest`_, а пока можно юзать JSON Placeholder.
 
@@ -23,34 +23,34 @@
 
 ## Файловая структура проекта:
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **components** -
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **components** -
   : Базовая папка с компонентами
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> componets/UI
-  : компоненты без уникальной логики, которые повторяются на нескольких страницах,напримпер кнопки
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> componets/UI
+  : компоненты без уникальной логики, которые повторяются на нескольких страницах,напримпер кнопки [Вот эти кнопки надо сюда](https://www.figma.com/proto/zpyHTGb3aKiAbpJJoIVqQ2/lubimovka?page-id=822%3A11417&node-id=828%3A12265&viewport=11728%2C2764%2C1.1076146364212036&scaling=min-zoom&starting-point-node-id=859%3A13873&hide-ui=1)
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **hooks**
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **hooks**
   : кастомные хуки
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **models**
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **models**
   : здесь описаны типы([интерфейсы](https://metanit.com/web/typescript/3.3.php)) сущностей, с которыми будем работать(например, пропсы)
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **pages** - собранные из других компонентов страницы, которые используются в роутинге
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **pages** - собранные из других компонентов страницы, которые используются в роутинге
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **store**
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **store**
   : _оснонвная папка для Redux_
-  : <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **store/reducers** - тут будут [слайсы](https://redux-toolkit.js.org/api/createslice/)
+  : <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **store/reducers** - тут будут [слайсы](https://redux-toolkit.js.org/api/createslice/)
 
-  : <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **store/types** - типы для редюсеров
+  : <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **store/types** - типы для редюсеров
 
   : **store.ts** - корневой файл `Redux`
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **utils**
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **utils**
   : папака с утилитами
 
-- <img src="./src/assets/folder.svg" alt="drawing" width="12"/> **assets**
+- <img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> **assets**
   : папка для медиа, использующихся в разработке
 
-<img src="./src/assets/folder.svg" alt="drawing" width="12"/> Folder
+<img src="./src/assets/icons/folder.svg" alt="drawing" width="12"/> Folder
 : Folder definition term resp
 : definition sequences

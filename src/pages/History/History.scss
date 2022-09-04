@@ -1,0 +1,351 @@
+@use "../../variables.scss";
+
+.History {
+  &__logo {
+    display: none;
+  }
+
+  &__dragSelect {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 80px;
+    font-family: "Neue Machina";
+    font-size: 28px;
+    line-height: 32px;
+    border-bottom: 1px solid variables.$black;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__info {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &-photo {
+      background-image: url("../../assets/history/history-main.png");
+      background-repeat: no-repeat;
+      height: 612px;
+      width: 100%;
+
+    }
+
+    &-data {
+      &_date {
+        &-title {
+          font-family: "Neue Machina";
+          font-size: 40px;
+          line-height: 40px;
+          margin: 0;
+          padding: 0;
+          padding-bottom: 17px;
+          padding-top: 57px;
+          text-align: left;
+        }
+
+        &-paragraph {
+          font-family: "Formular Light";
+          font-size: 20px;
+          line-height: 28px;
+          margin: 0;
+          padding: 0;
+          padding-bottom: 80px;
+          text-align: left;
+        }
+      }
+
+      &_facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 96px;
+        row-gap: 66px;
+      }
+
+      &_fact {
+
+        &-title {
+          margin: 0;
+          padding: 0;
+          font-family: 'Neue Machina';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 40px;
+          text-align: left;
+          padding-bottom: 15px;
+        }
+
+        &-text {
+          margin: 0;
+          padding: 0;
+          font-family: 'Formular Light';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: left;
+        }
+      }
+
+    }
+
+    &-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 140px;
+
+
+      &-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+
+    &-link-title {
+      font-family: 'Neue Machina';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 40px;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 35px;
+    }
+
+    // &-link {
+    //   padding-bottom: 10px;
+    // }
+  }
+
+  &__main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-cover {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 100px;
+
+      &-image {
+        background-image: url("../../assets/history/history-boy.png");
+        background-repeat: no-repeat;
+        width: 360px;
+        height: 480px;
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+
+        &_title {
+          font-family: 'Neue Machina';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 72px;
+          line-height: 70px;
+          text-align: left;
+          max-width: 612px;
+          padding: 0;
+          margin: 0;
+        }
+
+        &_paragraph {
+          font-family: 'Formular Light';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 28px;
+          text-align: left;
+          align-self: end;
+          max-width: 478px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &-blockquote {
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 38px;
+        max-width: 870px;
+        text-align: left;
+        grid-column: span 2;
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+    }
+
+    &-paragraph {
+      font-family: 'Formular Light';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: left;
+      max-width: 720px;
+
+      &:last-of-type {
+        padding-bottom: 250px;
+      }
+    }
+
+    &-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      min-height: 342px;
+      gap: 60px;
+      padding: 100px 0 80px;
+
+      &_photo {
+        &_1 {
+          background-image: url("../../assets/history/photo-grid2.png");
+        }
+
+        &_2 {
+          background-image: url("../../assets/history/photo-grid1.png");
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .History {
+
+    // margin: 0 24px 0;
+    &__logo {
+      display: block;
+      width: 43px;
+      height: 34px;
+      background-image: url("../../assets/icons/love.svg");
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      padding: 38px 0 0 24px;
+    }
+
+    &__info {
+      grid-template-columns: 100%;
+
+      &-data {
+        padding: 0 20px;
+
+        &_date {
+          &-title {
+            font-size: 28px;
+            line-height: 32px;
+          }
+
+          &-paragraph {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+
+        &_facts {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      &-photo {
+        height: 380px;
+        background-size: cover;
+      }
+
+      &-links {
+        grid-template-columns: 100%;
+        gap: 60px;
+        padding-bottom: 60px;
+      }
+
+      &-link-title {
+        font-size: 28px;
+        line-height: 32px;
+        padding-bottom: 8px;
+      }
+
+      &-link {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 0 !important;
+      }
+    }
+
+    &__main {
+      &-cover {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 56px 20px 0;
+
+        &-image {
+          width: 100%;
+          order: 1;
+        }
+
+        &-text {
+          &_title {
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+          &_paragraph {
+            font-size: 20px;
+            line-height: 28px;
+            padding: 25px 0 0 30px;
+            font-size: 20px;
+            line-height: 28px;
+            padding-bottom: 50px;
+          }
+        }
+
+        &-blockquote {
+          font-size: 28px;
+          line-height: 32px;
+          order: 2;
+          padding: 56px 0 42px;
+        }
+      }
+
+      &-paragraph {
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 28px;
+
+        &:last-of-type {
+          padding-bottom: 100px;
+        }
+      }
+
+      &-photo-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 56px 20px;
+
+        &_photo {
+          &_1 {
+            height: 200px;
+            background-size: cover;
+          }
+
+          &_2 {
+            height: 200px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@use "../../variables.scss";
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 55px;
+  }
+
+  &__address {
+    text-align: left;
+    padding: 30px 0 0;
+
+    &-place {
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-addr {
+      padding: 0;
+      margin: 0;
+      opacity: 0.6;
+      padding-top: 8px;
+      font-family: "Formular Light";
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__logo {
+    background-image: url("../../assets/icons/full-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 93px;
+    height: 80px;
+    grid-area: logo;
+  }
+
+  &__links {
+    max-width: 400px;
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+    row-gap: 10px;
+    padding: 56px 0 0;
+  }
+
+  &__link {
+    color: variables.$black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Formular Light";
+    font-size: 18px;
+    line-height: 23px;
+
+    &-underscored {
+      text-decoration: underline;
+      color: variables.$black;
+    }
+  }
+
+  &__additional-links {
+    display: grid;
+    row-gap: 10px;
+    padding: 50px 0 0;
+    text-align: left;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__sponsors {
+    padding: 80px 0;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    justify-content: center;
+    box-sizing: border-box;
+
+    &-figures {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+      column-gap: 50px;
+    }
+
+    &-title {
+      display: none;
+    }
+
+    & figure {
+      margin: 0;
+    }
+
+    & figcaption {
+      font-family: "Formular Light";
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 18px;
+    }
+  }
+
+  &__pb {
+    border-top: 1px solid variables.$black;
+    padding: 32px 27px 74px;
+    text-align: left;
+    font-family: "Formular Light";
+
+    &-privacy {
+      display: block;
+      padding-top: 10px;
+      color: variables.$black;
+
+    }
+
+    &-designers {
+      margin: 0;
+      background-image: url("../../assets/icons/shishki-logo.svg");
+      background-repeat: no-repeat;
+      background-size: 27px 25px;
+      background-position: center left;
+      padding: 0 0 0 27px;
+      margin-top: 60px;
+      min-height: 27px;
+    }
+
+    &-developers {
+      margin: 0;
+      padding-top: 16px;
+    }
+  }
+}

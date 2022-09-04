@@ -1,0 +1,65 @@
+@use "../../variables.scss";
+
+.page404 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 50px !important;
+}
+
+.rotated-wrapper {
+  transform: rotate(4deg);
+  background-color: variables.$main-background;
+  position: relative;
+
+
+  z-index: 1;
+
+  &.deg10 {
+    transform: rotate(17deg);
+    transform-origin: 55% top;
+    z-index: 0;
+
+    & .wrapper-spinner {
+      animation: spin 10s infinite linear reverse;
+    }
+  }
+
+}
+
+.wrapper-spinner {
+  // position: absolute;
+  overflow: hidden;
+  display: flex;
+  border: 1px solid black;
+  // left: 0;
+  // top: 0;
+  background-repeat: repeat-x;
+  min-width: 200vw;
+  height: 50px;
+  animation: spin 10s infinite linear;
+
+
+
+  &__image {
+    background-image: url("../../assets/icons/404.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}

@@ -1,0 +1,131 @@
+@use "../../../variables.scss";
+
+// swiper-button-prev swiper-button-disabled
+.SliderArr {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+  transition-delay: .2s;
+  border-radius: 50%;
+  cursor: pointer;
+
+
+
+  &.swiper-button-prev {
+    background-image: url("../../../assets/icons/arrow-left.svg");
+    background-position: center;
+    background-size: 20px 13px;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      border: 1px solid variables.$black;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom: 0;
+      transform: rotate(-90deg);
+      transform-origin: bottom center;
+      transition: .4s;
+      width: 50px;
+      height: 25px;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 25px;
+      box-sizing: border-box;
+      border: 1px solid variables.$black;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom: 0;
+      transform: rotate(-90deg);
+      transform-origin: bottom center;
+      transition: transform .3s;
+      transition-delay: opacity .3s;
+      opacity: 0;
+    }
+
+    &:hover {
+      & {
+        background-color: variables.$black;
+        background-image: url("../../../assets/icons/arrow-left-white.svg");
+      }
+
+      &::after {
+        visibility: visible;
+        opacity: 1;
+        transform: rotate(-270deg);
+      }
+    }
+
+    &.swiper-button-disabled {}
+  }
+
+  &.swiper-button-next {
+    background-image: url("../../../assets/icons/arrow-black.svg");
+    background-position: center;
+    background-size: 20px 13px;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      border: 1px solid variables.$black;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom: 0;
+      transform: rotate(90deg);
+      transform-origin: bottom center;
+      transition: .4s;
+      width: 50px;
+      height: 25px;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 25px;
+      box-sizing: border-box;
+      border: 1px solid variables.$black;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom: 0;
+      transform: rotate(90deg);
+      transform-origin: bottom center;
+      transition: transform .3s;
+      transition-delay: opacity .3s;
+      opacity: 0;
+    }
+
+    &:hover {
+      & {
+        background-color: variables.$black;
+        background-image: url("../../../assets/icons/arrow-white.svg");
+      }
+
+      &::after {
+        // transform: rotate(180deg);
+        visibility: visible;
+        opacity: 1;
+        transform: rotate(270deg);
+      }
+    }
+
+    &.swiper-button-disabled {}
+  }
+}

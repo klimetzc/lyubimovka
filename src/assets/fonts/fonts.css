@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Formular Light";
+  src: url(./formular-light.woff) format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url(./PPNeueMachina-Regular.woff) format("woff");
+  font-weight: 400;
+}
